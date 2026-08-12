@@ -30,8 +30,9 @@ TikTok-Claim-Classification-Project/
 │   └── tiktok_dataset.csv                   # Cleaned Primary Dataset (19,382 rows x 12 columns)
 ├── notebooks/
 │   ├── 01_tiktok_eda_and_visualization.ipynb    # Course 2: Exploratory Data Analysis & Visualizations
-│   ├── 02_tiktok_logistic_regression.ipynb     # Course 4: Regression Modeling & Hypothesis Verification
-│   └── 03_tiktok_machine_learning_models.ipynb # Course 5: Random Forest & XGBoost Machine Learning Models
+│   ├── 02_tiktok_statistical_hypothesis_testing.ipynb # Course 3: Statistical Analysis & Hypothesis Testing (A/B Test)
+│   ├── 03_tiktok_logistic_regression.ipynb     # Course 4: Logistic Regression Modeling
+│   └── 04_tiktok_machine_learning_models.ipynb # Course 5: Random Forest & XGBoost Machine Learning Models
 ├── src/                                     # Reusable Python Production Modules
 │   ├── data_preprocessing.py                # Data loading, cleaning, and feature engineering
 │   ├── eda_visualizations.py                # Exploratory plot generation script
