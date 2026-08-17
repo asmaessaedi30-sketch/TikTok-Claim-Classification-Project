@@ -27,11 +27,11 @@ def load_and_clean_data(file_path):
 def prepare_features_and_target(df_clean):
     """
     Prepares feature matrix X and target vector y with dummy encoding.
+    Excludes engagement count metrics to prevent target leakage and align
+    with the champion Random Forest model defined in Notebook 04.
     """
     feature_cols = [
-        'video_view_count', 'video_like_count', 'video_share_count',
-        'video_download_count', 'video_comment_count', 'text_length',
-        'author_ban_status', 'verified_status'
+        'text_length', 'author_ban_status', 'verified_status'
     ]
     
     X = df_clean[feature_cols]
