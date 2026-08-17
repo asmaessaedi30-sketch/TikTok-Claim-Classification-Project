@@ -85,23 +85,23 @@ Analysis of **19,382 TikTok videos** revealed stark structural differences betwe
 ## 🖼 Visual Highlights
 
 ### 1. Claim vs. Opinion Distribution
-![Claim Status Distribution](visualizations/claim_status_distribution.png)
+![Claim Status Distribution](visualizations/claim_status_distribution.png?v=2)
 *Figure 1: Class balance between claim and opinion videos across 19,084 dataset rows.*
 
 ### 2. Engagement Comparison (View Count by Claim Status)
-![Engagement Boxplot](visualizations/engagement_by_claim_status.png)
+![Engagement Boxplot](visualizations/engagement_by_claim_status.png?v=2)
 *Figure 2: Log-scale distribution of video view counts, highlighting that claims receive over 100x the median views of opinions.*
 
 ### 3. Claim Breakdown by Account Verification Status
-![Verified Status Breakdown](visualizations/claim_by_verified_status.png)
+![Verified Status Breakdown](visualizations/claim_by_verified_status.png?v=2)
 *Figure 3: Breakdown showing that verified accounts predominantly post opinions (~8:1 ratio over claims).*
 
 ### 4. Author Ban Status Breakdown
-![Author Ban Status Breakdown](visualizations/author_ban_status_claim.png)
+![Author Ban Status Breakdown](visualizations/author_ban_status_claim.png?v=2)
 *Figure 4: Relationship between author ban status and claim status, showing authors of claims face significantly higher ban rates.*
 
 ### 5. Feature Importance (Random Forest Champion Model)
-![Feature Importance](visualizations/feature_importance.png)
+![Feature Importance](visualizations/feature_importance.png?v=2)
 *Figure 5: Feature Gini importance for the champion Random Forest model, led by video transcription text length and author status.*
 
 ---
@@ -111,7 +111,7 @@ Analysis of **19,382 TikTok videos** revealed stark structural differences betwe
 Multiple classification architectures were implemented and cross-validated using a **60% Train / 20% Validation / 20% Test** split. Engagement metrics were intentionally excluded to prevent target leakage and ensure model utility at video ingestion.
 
 ### Champion Model Confusion Matrix (Validation Set)
-![Random Forest Confusion Matrix](visualizations/confusion_matrix_rf.png)
+![Random Forest Confusion Matrix](visualizations/confusion_matrix_rf.png?v=2)
 *Figure 6: Confusion matrix for the Random Forest Champion model on the validation set.*
 
 ### Model Evaluation Matrix
