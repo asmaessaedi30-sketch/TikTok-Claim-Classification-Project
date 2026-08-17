@@ -51,12 +51,6 @@ TikTok-Claim-Classification-Project/
 │       ├── Executive_Summary_Logistic_Regression.pdf
 │       └── Executive_Summary_Random_Forest_vs_XGBoost.pdf
 └── visualizations/                          # Generated Figures & Charts
-    ├── claim_status_distribution.png
-    ├── engagement_by_claim_status.png
-    ├── claim_by_verified_status.png
-    ├── author_ban_status_claim.png
-    ├── confusion_matrix_rf.png
-    └── feature_importance.png
 ```
 
 ---
@@ -79,51 +73,6 @@ Analysis of **19,382 TikTok videos** revealed stark structural differences betwe
 - **Verified Accounts** predominantly post **Opinions** (over 94% of verified account videos are opinions).
 - **Unverified Accounts** generate the vast majority of **Claims**.
 - Active users who post claims face a significantly higher rate of being **Banned** or placed **Under Review**.
-
----
-
-## 🖼 Visual Highlights
-
-### 1. Claim vs. Opinion Distribution
-![Claim Status Distribution](visualizations/claim_status_distribution.png?v=2)
-*Figure 1: Class balance between claim and opinion videos across 19,084 dataset rows.*
-
-### 2. Engagement Comparison (View Count by Claim Status)
-![Engagement Boxplot](visualizations/engagement_by_claim_status.png?v=2)
-*Figure 2: Log-scale distribution of video view counts, highlighting that claims receive over 100x the median views of opinions.*
-
-### 3. Claim Breakdown by Account Verification Status
-![Verified Status Breakdown](visualizations/claim_by_verified_status.png?v=2)
-*Figure 3: Breakdown showing that verified accounts predominantly post opinions (~8:1 ratio over claims).*
-
-### 4. Author Ban Status Breakdown
-![Author Ban Status Breakdown](visualizations/author_ban_status_claim.png?v=2)
-*Figure 4: Relationship between author ban status and claim status, showing authors of claims face significantly higher ban rates.*
-
-### 5. Feature Importance (Random Forest Champion Model)
-![Feature Importance](visualizations/feature_importance.png?v=2)
-*Figure 5: Feature Gini importance for the champion Random Forest model, led by video transcription text length and author status.*
-
----
-
-## 🤖 Machine Learning Model Benchmarks
-
-Multiple classification architectures were implemented and cross-validated using a **60% Train / 20% Validation / 20% Test** split. Engagement metrics were intentionally excluded to prevent target leakage and ensure model utility at video ingestion.
-
-### Champion Model Confusion Matrix (Validation Set)
-![Random Forest Confusion Matrix](visualizations/confusion_matrix_rf.png?v=2)
-*Figure 6: Confusion matrix for the Random Forest Champion model on the validation set.*
-
-### Model Evaluation Matrix
-
-| Model Architecture | Precision (Claim) | Recall (Claim) | F1-Score (Claim) | Overall Accuracy | Champion Selection |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Logistic Regression** | 72.0% | 63.0% | 0.67 | 69.0% | Baseline |
-| **Gradient Boosting / XGBoost** | 70.0% | 73.0% | 0.72 | 71.5% | Candidate |
-| **Random Forest (Tuned)** | **72.0%** | **67.0%** | **0.69** | **70.0%** | **🏆 Champion** |
-
-> **Business Rationale for Champion Selection:**  
-> In user safety and content moderation, maximizing claim detection while maintaining balanced precision is crucial. The **Random Forest champion model** provides stable generalization using video metadata (`text_length`, `author_ban_status`, `verified_status`) prior to engagement accumulation.
 
 ---
 
