@@ -55,27 +55,6 @@ TikTok-Claim-Classification-Project/
 
 ---
 
-## 📊 Key Data Insights & Exploratory Data Analysis
-
-Analysis of **19,382 TikTok videos** revealed stark structural differences between videos making factual claims versus individual opinions:
-
-### 1. Engagement Skew & High-Impact Claims
-- Videos classified as **Claims** receive drastically higher engagement (views, likes, shares, downloads, comments) compared to **Opinions**.
-- **99% of total platform video views** are concentrated among claim videos.
-- Engagement distributions are heavily right-skewed, demonstrating that claims carry massive public exposure.
-
-| Video Type | Median Views | Median Likes | Median Shares | Median Downloads |
-| :--- | :--- | :--- | :--- | :--- |
-| **Claim** | **501,557** | **122,863** | **24,374** | **4,921** |
-| **Opinion** | **4,973** | **1,023** | **201** | **41** |
-
-### 2. Verified Accounts vs. Unverified Accounts
-- **Verified Accounts** predominantly post **Opinions** (over 94% of verified account videos are opinions).
-- **Unverified Accounts** generate the vast majority of **Claims**.
-- Active users who post claims face a significantly higher rate of being **Banned** or placed **Under Review**.
-
----
-
 ## 💡 Strategic Recommendations for TikTok Management
 
 1. **Automated Triage System:** Implement the Random Forest champion model at ingestion to flag videos with predicted claim scores above 0.5 for priority human review.
